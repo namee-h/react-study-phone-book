@@ -17,7 +17,7 @@ export default function Header() {
 
 
   return (
-    <AppBar position="static" color="primary" sx={{ mb: 2 }}>
+    <AppBar position="sticky" color="primary" sx={{ mb: 2 }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" component="div" sx={{cursor: 'pointer'}} onClick={()=> navigate('/')}>
           연락처
