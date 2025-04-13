@@ -1,4 +1,3 @@
-// src/component/Header.jsx
 import {
   AppBar,
   Toolbar,

@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Routes, Route } from 'react-router-dom'
 import ContactList from './pages/ContactList'
 import ContactDetail from './pages/ContactDetail'
