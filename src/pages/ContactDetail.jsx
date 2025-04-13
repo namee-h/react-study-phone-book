@@ -44,6 +44,12 @@ export default function ContactDetail() {
       <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
         <Button
           variant="outlined"
+          onClick={() => navigate(-1)}
+        >
+          뒤로가기
+        </Button>
+        <Button
+          variant="outlined"
           onClick={() => navigate(`/edit/${contact.id}`)}
         >
           수정

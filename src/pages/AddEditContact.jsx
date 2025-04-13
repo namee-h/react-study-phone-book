@@ -11,7 +11,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export default function AddEditContact() {
   const navigate = useNavigate()
-  const { id } = useParams()
+  const { id } = useParams() // 수정모드 일때 id값 받아오기
   const { contacts, addContact, updateContact } = useContactStore()
 
   const isEdit = Boolean(id)
@@ -64,9 +64,18 @@ export default function AddEditContact() {
             onChange={(e) => setPhone(e.target.value)}
             fullWidth
           />
-          <Button variant="contained" color="primary" type="submit">
-            {isEdit ? '수정 완료' : '저장'}
-          </Button>
+          <Stack direction="row" spacing={2} display='flex' justifyContent='space-between'>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={() => navigate(-1)} // 이전 페이지로 돌아가기
+            >
+              취소
+            </Button>
+            <Button variant="contained" color="primary" type="submit">
+              {isEdit ? '수정 완료' : '저장'}
+            </Button>
+          </Stack>
         </Stack>
       </form>
     </Paper>

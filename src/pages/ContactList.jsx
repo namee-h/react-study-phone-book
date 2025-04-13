@@ -5,7 +5,7 @@ import { Typography } from '@mui/material'
 import { useState } from 'react'
 
 export default function ContactList() {
-  const { contacts } = useContactStore()
+  const { contacts } = useContactStore() //zustand 연락처 상태 가져오기
   const [search, setSearch] = useState('')
 
   // 검색 필터 + 즐겨찾기 우선 정렬
